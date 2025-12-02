@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./src/multimedia/images/logoProdismo.ico">
+    <title>Centro de Descargas - Prodismo SRL</title>
+    <meta name="description"
+        content="Centro de descargas de Prodismo SRL. Descarga aplicaciones y herramientas para el control de gastos de viajes.">
+    <meta name="keywords" content="PRODISMO SRL, descargas, AppGastos, aplicaciones móviles, control de gastos">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS (si es necesario) -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-700 to-blue-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+					<div class="flex-shrink-0">
+                        <img src="./src/multimedia/images/ITProdimo_logo_50x50.png"
+							alt="Logo Prodismo" class="h-12 w-12 rounded-full"
+							>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Prodismo SRL</h1>
+                        <p class="text-sm text-blue-100">Diseño, construcción y montaje industrial</p>
+                    </div>
+                </div>
+                
+                <nav class="flex space-x-6">
+                    <a href="./index.html" class="text-sm font-medium hover:text-blue-200 transition-colors">
+                        <i class="fas fa-home mr-2"></i>Inicio
+                    </a>
+                    <a href="#" class="text-sm font-medium hover:text-blue-200 transition-colors">
+                        <i class="fas fa-info-circle mr-2"></i>Acerca de
+                    </a>
+                    <a href="#" class="text-sm font-medium hover:text-blue-200 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>Contacto
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-blue-600 to-blue-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <i class="fas fa-cloud-download-alt text-6xl mb-6 opacity-80"></i>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Centro de Descargas</h1>
+                <p class="text-xl max-w-3xl mx-auto mb-6">
+                    Accede a nuestras herramientas y aplicaciones desarrolladas para optimizar los procesos de Prodismo SRL
+                </p>
+                <div class="flex justify-center">
+                    <div class="animate-bounce">
+                        <i class="fas fa-arrow-down text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Page Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Aplicaciones Disponibles</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Descarga las últimas versiones de nuestras herramientas internas
+                </p>
+            </div>
+
+            <!-- Download Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- App Gastos Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center mb-6">
+                            <img src="./src/multimedia/images/AppCGP.png" 
+                                alt="Logo App Gastos Prodismo" 
+                                class="h-40 w-40 object-contain">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">App Gastos Prodismo SRL</h3>
+                            <div class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mb-4">
+                                <i class="fas fa-mobile-alt mr-2"></i>
+                                Versión 1.6.25
+                            </div>
+                            
+                            <p class="text-gray-600 mb-4">
+                                Aplicación para el control y gestión de gastos de viajes de Prodismo SRL. 
+                                Optimiza el proceso de reporte y aprobación de gastos corporativos.
+                            </p>
+                            
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-start">
+                                    <i class="fas fa-code text-blue-500 mt-1 mr-2"></i>
+                                    <span>Web version developed by CABL</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-mobile text-green-500 mt-1 mr-2"></i>
+                                    <span>Mobile version developed by Germán Montalbetti</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-copyright text-gray-400 mt-1 mr-2"></i>
+                                    <span>Todos los derechos reservados. Prodismo©2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <button id="download-apk" 
+                                    data-file="./AppGastos_v1_6_18_8_3_22.apk"
+                                    data-filename="AppGastos_Prodismo_v1.6.25.apk"
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center">
+                                <i class="fas fa-download mr-3"></i>
+                                Descargar APK (v1.6.25)
+                            </button>
+                            
+                            <div class="text-center">
+                                <button id="version-info" 
+                                        class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    Ver detalles de versión
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Footer -->
+                    <div class="bg-gray-50 px-6 py-4 border-t border-gray-100">
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>Última actualización: Mar 2023</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-database mr-2"></i>
+                                <span>~7 MB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for Future Apps -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-12 text-center">
+                    <i class="fas fa-plus-circle text-5xl text-gray-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Próximamente</h3>
+                    <p class="text-gray-500 text-sm">
+                        Nuevas herramientas en desarrollo
+                    </p>
+                </div>
+
+                <!-- Stats Card -->
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-chart-line text-4xl mb-4 opacity-80"></i>
+                        <h3 class="text-xl font-bold mb-2">Estadísticas de Descargas</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-100">Total de descargas:</span>
+                            <span class="text-2xl font-bold" id="download-count">0</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-100">Última descarga:</span>
+                            <span class="font-medium" id="last-download">--/--/----</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-100">Versión activa:</span>
+                            <span class="font-medium">v1.6.25</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-blue-400">
+                        <p class="text-sm text-blue-100 text-center">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            Todas las descargas son seguras y verificadas
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Información Importante</h3>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-exclamation-triangle text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Solo para empleados</h4>
+                        <p class="text-gray-600 text-sm">
+                            Estas aplicaciones son para uso exclusivo de empleados y colaboradores de Prodismo SRL.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Sin malware</h4>
+                        <p class="text-gray-600 text-sm">
+                            Todas las aplicaciones están libres de virus y han pasado controles de seguridad.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-question-circle text-purple-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">¿Necesitas ayuda?</h4>
+                        <p class="text-gray-600 text-sm">
+                            Contacta al departamento de IT si tienes problemas con la instalación o uso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-3">
+                        <img src="./src/multimedia/images/ITProdimo_logo_50x50.png" 
+                            alt="Logo Prodismo" 
+                            class="h-10 w-10 rounded-full">
+                        <div>
+                            <p class="font-bold text-lg">Prodismo SRL</p>
+                            <p class="text-sm text-blue-200">Centro de Descargas Oficial</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <div class="flex items-center justify-center md:justify-end space-x-2 mb-3">
+                        <i class="fas fa-shield-alt text-blue-300"></i>
+                        <span class="text-sm">Sistema seguro de descargas</span>
+                    </div>
+                    
+                    <div class="flex flex-wrap justify-center md:justify-end gap-4 text-sm text-blue-200">
+                        <a href="./politica-privacidad/politica-privacidad.html" class="hover:text-white transition-colors">Política de privacidad</a>
+                        <span class="text-blue-400">|</span>
+                        <a href="./terminos-usos/terminos-usos.html" class="hover:text-white transition-colors">Términos de uso</a>
+                        <span class="text-blue-400">|</span>
+                        <a href="#" class="hover:text-white transition-colors">Contacto técnico</a>
+                    </div>
+                    
+                    <p class="text-sm text-blue-300 mt-4">
+                        © 2025 Prodismo SRL. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+	<script type="text/javascript" src="./js/downloads.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Download Button Functionality
+            const downloadButton = document.getElementById('download-apk');
+            const downloadCountElement = document.getElementById('download-count');
+            const lastDownloadElement = document.getElementById('last-download');
+            const versionInfoButton = document.getElementById('version-info');
+            
+            // Initialize download count from localStorage
+            let downloadCount = parseInt(localStorage.getItem('prodismo_download_count')) || 342;
+            downloadCountElement.textContent = downloadCount.toLocaleString();
+            
+            // Initialize last download date
+            const lastDownload = localStorage.getItem('prodismo_last_download');
+            if (lastDownload) {
+                lastDownloadElement.textContent = lastDownload;
+            }
+            
+            // Download Button Click Handler
+            downloadButton.addEventListener('click', function() {
+                const fileUrl = this.getAttribute('data-file');
+                const fileName = this.getAttribute('data-filename');
+                
+                // Show confirmation dialog
+                Swal.fire({
+                    title: '¿Confirmar descarga?',
+                    html: `
+                        <div class="text-left">
+                            <p class="mb-2">Estás a punto de descargar:</p>
+                            <p class="font-semibold text-blue-600">${fileName}</p>
+                            <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                                <p class="text-sm text-gray-600">
+                                    <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                                    Asegúrate de tener permisos de instalación desde fuentes desconocidas habilitados en tu dispositivo Android.
+                                </p>
+                            </div>
+                        </div>
+                    `,
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Descargar',
+                    cancelButtonText: 'Cancelar',
+                    confirmButtonColor: '#2563eb',
+                    cancelButtonColor: '#6b7280'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Create temporary link for download
+                        const link = document.createElement('a');
+                        link.href = fileUrl;
+                        link.download = fileName;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        
+                        // Update download stats
+                        downloadCount++;
+                        localStorage.setItem('prodismo_download_count', downloadCount);
+                        downloadCountElement.textContent = downloadCount.toLocaleString();
+                        
+                        // Update last download date
+                        const now = new Date();
+                        const formattedDate = now.toLocaleDateString('es-ES', {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric'
+                        });
+                        localStorage.setItem('prodismo_last_download', formattedDate);
+                        lastDownloadElement.textContent = formattedDate;
+                        
+                        // Show success message
+                        Swal.fire({
+                            title: '¡Descarga iniciada!',
+                            html: `
+                                <div class="text-center">
+                                    <i class="fas fa-check-circle text-green-500 text-5xl mb-4"></i>
+                                    <p class="mb-2">La descarga ha comenzado.</p>
+                                    <p class="text-sm text-gray-600">
+                                        Si la descarga no inicia automáticamente, 
+                                        <a href="${fileUrl}" class="text-blue-600 font-medium">haz clic aquí</a>.
+                                    </p>
+                                </div>
+                            `,
+                            icon: 'success',
+                            confirmButtonText: 'Entendido',
+                            confirmButtonColor: '#2563eb'
+                        });
+                    }
+                });
+            });
+            
+            // Version Info Button
+            versionInfoButton.addEventListener('click', function() {
+                Swal.fire({
+                    title: 'Detalles de la Versión 1.6.25',
+                    html: `
+                        <div class="text-left">
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-800 mb-2">Novedades:</h4>
+                                <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                    <li>Optimización del rendimiento en dispositivos antiguos</li>
+                                    <li>Corrección de errores en el reporte de viáticos</li>
+                                    <li>Mejora en la sincronización offline/online</li>
+                                    <li>Nuevo diseño de interfaz para mejor usabilidad</li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-800 mb-2">Requisitos del sistema:</h4>
+                                <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                    <li>Android 7.0 o superior</li>
+                                    <li>9 MB de espacio disponible</li>
+                                    <li>Conexión a internet para sincronización</li>
+                                </ul>
+                            </div>
+                            <div class="p-3 bg-gray-50 rounded-lg">
+                                <p class="text-sm text-gray-600">
+                                    <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                                    Versión desarrollada específicamente para el control de gastos de viajes de Prodismo SRL.
+                                </p>
+                            </div>
+                        </div>
+                    `,
+                    width: '600px',
+                    confirmButtonText: 'Entendido',
+                    confirmButtonColor: '#2563eb'
+                });
+            });
+            
+            // Mobile menu toggle (if needed in future)
+            const mobileMenuButton = document.createElement('button');
+            mobileMenuButton.className = 'md:hidden fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg z-40';
+            mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+            document.body.appendChild(mobileMenuButton);
+            
+            mobileMenuButton.addEventListener('click', function() {
+                // Mobile menu functionality can be added here
+                Swal.fire({
+                    title: 'Menú Móvil',
+                    html: `
+                        <div class="space-y-3">
+                            <a href="./index.html" class="block p-3 bg-blue-50 text-blue-700 rounded-lg">
+                                <i class="fas fa-home mr-2"></i>Volver al inicio
+                            </a>
+                            <a href="#" class="block p-3 bg-gray-50 text-gray-700 rounded-lg">
+                                <i class="fas fa-info-circle mr-2"></i>Acerca de
+                            </a>
+                            <a href="#" class="block p-3 bg-gray-50 text-gray-700 rounded-lg">
+                                <i class="fas fa-download mr-2"></i>Otras descargas
+                            </a>
+                        </div>
+                    `,
+                    showConfirmButton: false,
+                    showCloseButton: true
+                });
+            });
+        });
+    </script>
+</body>
+</html>

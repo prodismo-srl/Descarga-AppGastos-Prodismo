@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Política de Privacidad">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/Logo_Prodismo.ico">
+    <title>Prodismo SRL - Política de Privacidad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    
+    <!-- Tailwind styles -->
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-gray-50 dark:bg-gray-400 dark:text-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center space-x-3">
+                    <a href="../index.html" class="p-1 m-1"">
+                        <img 
+                            src="../src/multimedia/images/ProdismoFirma.png" 
+                            data-light-src="../src/multimedia/images/ProdismoFirma.png" 
+                            data-dark-src="../src/multimedia/images/logo01-bco.png" 
+                            alt="Logo Prodismo" 
+                            width="200" height="40"
+                            data-theme-logo
+                        >
+                    </a>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-50"><strong>Prodismo SRL</strong></h1>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Politica de Privacidad</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-blue-600 font-medium my-auto">Inicio</a>
+                    <a href="#" class="text-blue-600 font-semibold border-blue-600 my-auto">Privacidad</a>
+                    <a href="../terminos-usos/terminos-usos.html" class="text-blue-600 font-semibold border-blue-600 my-auto">Términos</a>
+                    
+                    <!-- Contacto con SweetAlert2 -->
+                    <button id="contacto-btn" class="text-gray-600 hover:text-blue-600 font-medium focus:outline-none">
+                        Contacto
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg dark:bg-gray-700 dark:text-gray-200">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img
+                src="../src/multimedia/images/ProdismoFirma.png"
+                data-light-src="../src/multimedia/images/ProdismoFirma.png"
+                data-dark-src="../src/multimedia/images/logo01-bco.png"
+                alt="Logo Prodismo" width="150px" height="40px"
+                data-theme-logo>
+
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2 dark:text-gray-50">General</h5>
+                <a href="../../index.html" class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2 dark:text-blue-200"><i class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2 dark:text-gray-50">Configuraciones</h5>
+                <a href="../politica-privacidad/politica-privacidad.html" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2 dark:text-gray-400"><i class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../terminos-usos/terminos-usos.html" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2 dark:text-gray-400"><i class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../configuracion-cookies/cookies.html" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2 dark:text-gray-400"><i class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../mapa-sitio/mapa-sitio.html" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2 dark:text-gray-400"><i class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2 dark:text-gray-400"><i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto</div>
+            </div>
+
+            <div class="pt-4 border-t dark:text-gray-50">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-xl shadow-sm p-8 dark:text-gray-100 dark:bg-gray-500">
+            <div class="text-center mb-10">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Política de Privacidad</h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto dark:text-gray-50">
+                    Esta Política de Privacidad describe cómo <strong>Prodismo SRL</strong> recopila, utiliza y protege la información personal 
+                    en cumplimiento con los estándares internacionales de seguridad de la información.
+                </p>
+            </div>
+
+            <div class="prose prose-lg max-w-none">
+                <!-- Introducción -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Introducción</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        En <strong>Prodismo SRL</strong>, nos comprometemos a proteger la privacidad y seguridad de la información 
+                        personal de nuestros empleados, clientes, proveedores y otras partes interesadas. Esta política se alinea 
+                        con nuestros sistemas de gestión de seguridad de la información basados en <strong>ISO/IEC 27001:2022</strong> 
+                        y los requisitos de <strong>TISAX</strong> para la industria automotriz.
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-50">
+                        Esta política aplica a toda la información personal procesada por <strong>Prodismo SRL</strong>, independientemente del 
+                        formato o medio en que se encuentre.
+                    </p>
+                </section>
+
+                <!-- Alcance -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Alcance</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Esta política aplica a:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2 dark:text-gray-50">
+                        <li>Todos los empleados de <strong>Prodismo SRL</strong></li>
+                        <li>Contratistas, consultores y proveedores que accedan a información personal</li>
+                        <li>Todos los sistemas de información que procesan datos personales</li>
+                        <li>Todas las ubicaciones físicas de la organización</li>
+                    </ul>
+                </section>
+
+                <!-- Principios de Protección de Datos -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Principios de Protección de Datos</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Nos regimos por los siguientes principios fundamentales de protección de datos:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">Legalidad, equidad y transparencia</h3>
+                            <p class="text-gray-700 dark:text-gray-500">Procesamos los datos personales de manera legal, justa y transparente.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">Limitación de la finalidad</h3>
+                            <p class="text-gray-700 dark:text-gray-500">Recopilamos datos para fines específicos, explícitos y legítimos.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">Minimización de datos</h3>
+                            <p class="text-gray-700 dark:text-gray-500">Solo recopilamos datos adecuados, relevantes y limitados a lo necesario.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">Exactitud</h3>
+                            <p class="text-gray-700 dark:text-gray-500">Mantenemos los datos personales exactos y actualizados.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">Limitación del plazo de conservación</h3>
+                            <p class="text-gray-700 dark:text-gray-500">Conservamos los datos solo durante el tiempo necesario.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">Integridad y confidencialidad</h3>
+                            <p class="text-gray-700 dark:text-gray-500">Procesamos los datos de manera segura, protegiéndolos contra accesos no autorizados.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tipos de Datos Recopilados -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Tipos de Datos Recopilados</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Podemos recopilar y procesar los siguientes tipos de información personal:
+                    </p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:text-gray-700">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="py-3 px-4 text-left font-semibold text-gray-700 border-b">Categoría</th>
+                                    <th class="py-3 px-4 text-left font-semibold text-gray-700 border-b">Ejemplos</th>
+                                    <th class="py-3 px-4 text-left font-semibold text-gray-700 border-b">Base Legal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-900 dark:text-gray-500">
+                                    <td class="py-3 px-4 border-b">Datos de empleados</td>
+                                    <td class="py-3 px-4 border-b">Nombre, dirección, datos de contacto, información bancaria, historial laboral</td>
+                                    <td class="py-3 px-4 border-b">Contrato laboral, obligaciones legales</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-900 dark:text-gray-500">
+                                    <td class="py-3 px-4 border-b">Datos de clientes</td>
+                                    <td class="py-3 px-4 border-b">Información de contacto, datos de facturación, historial de compras</td>
+                                    <td class="py-3 px-4 border-b">Contrato, consentimiento, interés legítimo</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-900 dark:text-gray-500">
+                                    <td class="py-3 px-4 border-b">Datos de proveedores</td>
+                                    <td class="py-3 px-4 border-b">Información de contacto, datos bancarios, certificaciones</td>
+                                    <td class="py-3 px-4 border-b">Contrato, interés legítimo</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-900 dark:text-gray-500">
+                                    <td class="py-3 px-4 border-b">Datos técnicos</td>
+                                    <td class="py-3 px-4 border-b">Dirección IP, tipo de navegador, páginas visitadas, datos de cookies</td>
+                                    <td class="py-3 px-4 border-b">Consentimiento, interés legítimo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Finalidades del Tratamiento -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Finalidades del Tratamiento</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Utilizamos la información personal para las siguientes finalidades:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2 dark:text-gray-50">
+                        <li>Gestión de relaciones laborales y nóminas</li>
+                        <li>Prestación de servicios a clientes</li>
+                        <li>Gestión de proveedores y contratistas</li>
+                        <li>Cumplimiento de obligaciones legales y regulatorias</li>
+                        <li>Mejora de nuestros productos y servicios</li>
+                        <li>Comunicaciones de marketing (con consentimiento explícito)</li>
+                        <li>Gestión de seguridad y prevención de fraudes</li>
+                    </ul>
+                </section>
+
+                <!-- Bases Legales -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Bases Legales para el Tratamiento</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        El tratamiento de datos personales se basa en una o más de las siguientes bases legales:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-semibold text-gray-900">Consentimiento</h3>
+                                <p class="text-gray-700 dark:text-gray-50">Cuando el interesado ha dado su consentimiento explícito para el tratamiento.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-semibold text-gray-900">Contrato</h3>
+                                <p class="text-gray-700 dark:text-gray-50">Cuando el tratamiento es necesario para la ejecución de un contrato.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-semibold text-gray-900">Obligación legal</h3>
+                                <p class="text-gray-700 dark:text-gray-50">Cuando el tratamiento es necesario para el cumplimiento de una obligación legal.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-semibold text-gray-900">Interés legítimo</h3>
+                                <p class="text-gray-700 dark:text-gray-50">Cuando el tratamiento es necesario para los intereses legítimos de la empresa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Compartición de Datos -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Compartición de Datos</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Podemos compartir información personal con:
+                    </p>
+                    
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 rounded-lg">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-yellow-700">
+                                    <strong>Nota importante:</strong> Solo compartimos datos personales cuando es necesario y con las garantías adecuadas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <ul class="list-disc pl-6 text-gray-700 mb-4 dark:text-gray-50 space-y-2">
+                        <li>Proveedores de servicios que procesan datos en nuestro nombre (procesadores)</li>
+                        <li>Autoridades reguladoras y gubernamentales cuando es requerido por ley</li>
+                        <li>Socios comerciales cuando es necesario para la prestación de servicios</li>
+                        <li>Auditores y consultores para cumplimiento normativo</li>
+                    </ul>
+                    
+                    <p class="text-gray-700 dark:text-gray-50">
+                        Todos los terceros con los que compartimos datos están obligados contractualmente a mantener la confidencialidad 
+                        y seguridad de la información, de acuerdo con nuestros estándares de seguridad.
+                    </p>
+                </section>
+
+                <!-- Transferencias Internacionales -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Transferencias Internacionales</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        En caso de que sea necesario transferir datos personales fuera del Espacio Económico Europeo (EEE), 
+                        nos aseguramos de que existan garantías adecuadas, tales como:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2 dark:text-gray-50">
+                        <li>Decisiones de adecuación de la Comisión Europea</li>
+                        <li>Cláusulas contractuales estándar</li>
+                        <li>Certificaciones de privacidad válidas</li>
+                        <li>Excepciones específicas para situaciones particulares</li>
+                    </ul>
+                </section>
+
+                <!-- Seguridad de los Datos -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Seguridad de los Datos</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Implementamos medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad 
+                        adecuado al riesgo, incluyendo:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-green-800 mb-2">Medidas Técnicas</h3>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2 dark:text-gray-500">
+                                <li>Cifrado de datos en reposo y en tránsito</li>
+                                <li>Control de acceso basado en roles</li>
+                                <li>Autenticación multifactor</li>
+                                <li>Protección contra malware</li>
+                                <li>Copias de seguridad seguras</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-green-800 mb-2">Medidas Organizativas</h3>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-2 dark:text-gray-500">
+                                <li>Políticas y procedimientos de seguridad</li>
+                                <li>Formación y concienciación de empleados</li>
+                                <li>Acuerdos de confidencialidad</li>
+                                <li>Gestión de incidentes de seguridad</li>
+                                <li>Auditorías regulares</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 dark:text-gray-50">
+                        Nuestro sistema de gestión de seguridad de la información está certificado según 
+                        <a href="https://www.iso.org/standard/27001" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium dark:text-blue-400">ISO/IEC 27001:2022</a> 
+                        y cumple con los requisitos de 
+                        <a href="https://enx.com/tisax/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium dark:text-blue-400">TISAX</a> 
+                        para la industria automotriz.
+                    </p>
+                </section>
+
+                <!-- Conservación de Datos -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Conservación de Datos</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Conservamos los datos personales solo durante el tiempo necesario para cumplir con las finalidades 
+                        para las que fueron recopilados, incluyendo el cumplimiento de obligaciones legales, regulatorias, 
+                        fiscales o contables.
+                    </p>
+                    
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <h3 class="text-lg font-semibold text-blue-800 mb-2">Períodos de conservación típicos</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2 dark:text-gray-500">
+                            <li><strong>Datos de empleados:</strong> Durante la relación laboral y hasta 10 años después del cese</li>
+                            <li><strong>Datos de clientes:</strong> Durante la relación contractual y hasta 5 años después de su finalización</li>
+                            <li><strong>Datos de proveedores:</strong> Durante la relación contractual y hasta 5 años después de su finalización</li>
+                            <li><strong>Datos de marketing:</strong> Hasta que se revoque el consentimiento o 2 años desde el último contacto</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Derechos de los Interesados -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">11. Derechos de los Interesados</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        De acuerdo con la legislación aplicable, los interesados tienen los siguientes derechos:
+                    </p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:text-gray-50">
+                            <thead class="bg-gray-100 dark:bg-gray-900">
+                                <tr>
+                                    <th class="py-3 px-4 text-left font-semibold text-gray-700 border-b dark:text-gray-50">Derecho</th>
+                                    <th class="py-3 px-4 text-left font-semibold text-gray-700 border-b dark:text-gray-50">Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-500">
+                                    <td class="py-3 px-4 border-b font-medium">Acceso</td>
+                                    <td class="py-3 px-4 border-b">Derecho a obtener confirmación de si tratamos sus datos y acceder a ellos</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-500">
+                                    <td class="py-3 px-4 border-b font-medium">Rectificación</td>
+                                    <td class="py-3 px-4 border-b">Derecho a corregir datos inexactos o incompletos</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-500">
+                                    <td class="py-3 px-4 border-b font-medium">Supresión</td>
+                                    <td class="py-3 px-4 border-b">Derecho a solicitar la eliminación de sus datos personales</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-500">
+                                    <td class="py-3 px-4 border-b font-medium">Limitación</td>
+                                    <td class="py-3 px-4 border-b">Derecho a restringir el tratamiento de sus datos</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-500">
+                                    <td class="py-3 px-4 border-b font-medium">Portabilidad</td>
+                                    <td class="py-3 px-4 border-b">Derecho a recibir sus datos en formato estructurado y transmitirlos</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-500">
+                                    <td class="py-3 px-4 border-b font-medium">Oposición</td>
+                                    <td class="py-3 px-4 border-b">Derecho a oponerse al tratamiento de sus datos</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-500">
+                                    <td class="py-3 px-4 border-b font-medium">No ser objeto de decisiones automatizadas</td>
+                                    <td class="py-3 px-4 border-b">Derecho a no ser objeto de decisiones basadas únicamente en tratamiento automatizado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-6 bg-blue-50 rounded-lg p-4">
+                        <p class="text-blue-800">
+                            Para ejercer cualquiera de estos derechos, puede contactarnos a través de los medios indicados 
+                            en la sección "Contacto" de esta política.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Cookies y Tecnologías Similares -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">12. Cookies y Tecnologías Similares</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Nuestro sitio web utiliza cookies y tecnologías similares para mejorar la experiencia del usuario, 
+                        analizar el tráfico y personalizar el contenido. Las cookies se clasifican de la siguiente manera:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-purple-50 rounded-lg p-4 text-center border-l-4 border-purple-400">
+                            <h3 class="text-lg font-semibold text-purple-800 mb-2">Esenciales</h3>
+                            <p class="text-gray-700 text-sm dark:text-purple-500">Necesarias para el funcionamiento básico del sitio</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4 text-center border-l-4 border-blue-400">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">Analíticas de Terceros</h3>
+                            <p class="text-gray-700 text-sm dark:text-blue-500">Nos ayudan a entender cómo los usuarios interactúan con el sitio</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 rounded-lg p-4 text-center border-l-4 border-yellow-400">
+                            <h3 class="text-lg font-semibold text-yellow-800 mb-2">Funcionales</h3>
+                            <p class="text-gray-700 text-sm dark:text-yellow-500">Mejoran la funcionalidad y personalización</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 dark:text-gray-100">
+                        Puede gestionar sus preferencias de cookies a través de la configuración de su navegador o en el menu lateral de la izquierda en "Configuración de Cookies".
+                    </p>
+                </section>
+
+                <!-- Cambios a la Política -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">13. Cambios a la Política</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. 
+                        Cualquier cambio será publicado en esta página con la fecha de actualización correspondiente.
+                    </p>
+                    
+                    <div class="bg-gray-100 rounded-lg p-4 dark:bg-gray-900">
+                        <p class="text-gray-700 dark:text-gray-50">
+                            <strong>Fecha de última actualización:</strong> <span id="fecha-actualizacion"></span>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Contacto -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">14. Contacto</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Si tiene preguntas, inquietudes o desea ejercer sus derechos relacionados con esta Política de Privacidad, 
+                        puede contactarnos a través de:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white border border-gray-200 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Delegado de Protección de Datos</h3>
+                            <p class="text-gray-700 dark:text-gray-50">
+                                <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                                <a href="mailto:rrhh@prodismo.com" class="text-blue-600 hover:text-blue-800">rrhh@prodismo.com</a>
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-200 rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Dirección Postal</h3>
+                            <p class="text-gray-700 dark:text-gray-500">
+                                <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                                <strong>Prodismo SRL</strong><br>
+                                Departamento de Seguridad de la Información<br>
+                                Av. Japón 2230 - Córdoba Capital
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-red-50 border-l-4 border-red-400 p-4 rounded-lg dark:bg-red-900">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-exclamation-circle text-red-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-red-700 dark:text-red-50">
+                                    También tiene derecho a presentar una reclamación ante la autoridad de control de protección 
+                                    de datos competente si considera que el tratamiento de sus datos personales infringe la legislación aplicable.
+                                    <div class="flex flex-wrap gap-4 mt-6">
+                                        <a href="https://www.argentina.gob.ar/ley-25326" target="_blank"
+                                        class="block bg-red-100 hover:bg-red-300 text-gray-800 px-4 py-2 my-1 rounded-lg flex items-center transition-colors">
+                                        <i class="fas fa-external-link-alt mr-2"></i> Ley 25.326 - Protección de datos personales (Agentina)
+                                        </a>
+
+                                        <a href="https://registronacional.com/argentina/dnpdp-direccion-nacional-de-proteccion-de-datos-personales.htm" target="_blank"
+                                        class="block bg-red-100 hover:bg-red-300 text-gray-800 px-4 py-2 my-1 rounded-lg flex items-center transition-colors">
+                                        <i class="fas fa-external-link-alt mr-2"></i> DNPDP - Dirección Nacional de Proteccion de Datos Personales (Agentina)
+                                        </a>
+
+                                        <a href="https://www.argentina.gob.ar/aaip/datospersonales/derechos" target="_blank"
+                                        class="block bg-red-100 hover:bg-red-300 text-gray-800 px-4 py-2 my-2 rounded-lg flex items-center transition-colors">
+                                        <i class="fas fa-external-link-alt mr-2"></i> AAIP - Agencia de Acceso a la Información Pública (Agentina)
+                                        </a>
+                                        
+                                        <a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32016R0679" target="_blank"
+                                            class="block bg-red-100 hover:bg-red-300 text-gray-800 px-4 py-2 my-1 rounded-lg flex items-center transition-colors">
+                                            <i class="fas fa-external-link-alt mr-2"></i> RGPD - Reglamento General de Protección de Datos (UE)
+                                        </a>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Legislación Aplicable -->
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">15. Legislación Aplicable</h2>
+                    <p class="text-gray-700 mb-4 dark:text-gray-50">
+                        Esta Política de Privacidad se rige por la <strong>legislación argentina</strong> en materia de protección de datos 
+                        personales (Ley 25.326 y sus modificatorias) y se complementa con los principios establecidos en el 
+                        Reglamento General de Protección de Datos (RGPD) de la Unión Europea, aplicables en casos de tratamiento 
+                        de datos de interesados en el Espacio Económico Europeo.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a href="https://www.iso.org/standard/27001" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg flex items-center transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            ISO/IEC 27001:2022
+                        </a>
+                        
+                        <a href="https://enx.com/tisax/" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg flex items-center transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            TISAX
+                        </a>
+
+                        <a href="https://www.argentina.gob.ar/ley-25326" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg flex items-center transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Ley 25.326
+                        </a>
+
+                        <a href="https://registronacional.com/argentina/dnpdp-direccion-nacional-de-proteccion-de-datos-personales.htm" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg flex items-center transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            DNPDP
+                        </a>
+
+                        <a href="https://www.argentina.gob.ar/aaip/datospersonales/derechos" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg flex items-center transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            AAIP
+                        </a>
+                        
+                        <a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32016R0679" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg flex items-center transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            RGPD
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-8 dark:bg-gradient-to-r from-gray-900 to-gray-800 dark:text-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <img 
+                        src="../src/multimedia/images/logo01-bco.png" 
+                        data-light-src="../src/multimedia/images/ProdismoFirma.png" 
+                        data-dark-src="../src/multimedia/images/logo01-bco.png" 
+                        alt="Logo Prodismo" 
+                        width="120" height="30"
+                        data-theme-logo
+                    >
+                    <div>
+                        <p class="font-semibold"><strong>Prodismo SRL</strong></p>
+                        <p class="text-sm text-gray-300">Equipo Prodismo IT</p>
+                    </div>
+                </div>
+                
+                <div class="text-center sm:text-right">
+                    <p class="text-gray-200 text-sm">
+                        Seguridad de la Información &copy; 2025
+                    </p>
+                    <p class="text-gray-300 text-sm">
+                        Developed by Germán C. Montalbetti
+                    </p>
+                    <a href="https://www.prodismo.com" target="_blank" class="text-gray-300 hover:text-white text-sm mt-1 inline-block">
+                        www.prodismo.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../js/scripts-general_two.js"></script>
+    <script type="text/javascript" src="../js/politica-privacidad.js"></script>
+</body>
+</html>

@@ -1,0 +1,587 @@
+@charset "UTF-8";
+/* @import "../dist/output.css"; */
+/* Custom Styles for Prodismo Security Policy */
+
+/* ------ reseteo navegador ---------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'system-ui', 'sans-serif';
+    background-color: #f0f4f8;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+.smooth-page-transition {
+    cursor: pointer;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Table of Contents active state */
+.toc-link.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Print styles for PDF generation */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+    }
+    
+    table, figure {
+        page-break-inside: avoid;
+    }
+}
+
+/* Search highlight */
+.search-highlight {
+    background-color: #fef3c7;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.dark .search-highlight {
+    background-color: #92400e;
+    color: #fef3c7;
+}
+
+/* Floating table of contents responsive behavior */
+@media (max-width: 1023px) {
+    .lg\\:w-80 {
+        width: 100%;
+    }
+}
+
+/* Animation for theme toggle */
+.theme-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom list style for TISAX notes */
+.list-circle {
+    list-style-type: circle;
+}
+
+/* Enhanced focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Loading state for PDF download */
+.pdf-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Custom badge styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    color: #1e40af;
+}
+
+.dark .badge {
+    background-color: #1e3a8a;
+    color: #dbeafe;
+}
+
+.hero-gradient-sig {
+    background: linear-gradient(135deg, 
+        #1e3a8a 0%, 
+        #1e3a8a 25%, 
+        #2a4da3 40%, 
+        #3bbcf6 75%, 
+        #3bbcf6 100%);
+}
+
+.hero-gradient-iso9001 {
+    background: linear-gradient(135deg, 
+        #1e3a8a 0%, 
+        #1e3a8a 25%, 
+        #2a4da3 40%, 
+        #3b3ef6 75%, 
+        #3b3ef6 100%);
+}
+
+.hero-gradient-iso14001 {
+    background: linear-gradient(135deg, 
+        #1e3a8a 0%, 
+        #1e3a8a 25%, 
+        #2a4da3 40%, 
+        #41f63b 75%, 
+        #41f63b 100%);
+}
+
+.hero-gradient-iso27001 {
+    background: linear-gradient(135deg, 
+        #1e3a8a 0%, 
+        #1e3a8a 25%, 
+        #2a4da3 40%, 
+        #953bf6 75%, 
+        #953bf6 100%);
+}
+
+.hero-gradient-iso45001 {
+    background: linear-gradient(135deg, 
+        #1e3a8a 0%, 
+        #1e3a8a 25%, 
+        #2a4da3 40%, 
+        #fed314 75%, 
+        #fed314 100%);
+}
+
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+  }
+
+.bg-gray-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-300 {
+--tw-bg-opacity: 1;
+background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-400 {
+--tw-bg-opacity: 1;
+background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-500 {
+--tw-bg-opacity: 1;
+background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-600 {
+--tw-bg-opacity: 1;
+background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-700 {
+--tw-bg-opacity: 1;
+background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-800 {
+--tw-bg-opacity: 1;
+background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-900 {
+--tw-bg-opacity: 1;
+background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+
+
+/* Estilos mejorados para el botón de imprimir y banner de cookies */
+
+/* Botón de imprimir */
+#boton-imprimir-politica {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#boton-imprimir-politica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Banner de cookies */
+#banner-cookies-politica {
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animaciones */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Asegurar que los elementos sean visibles */
+#boton-imprimir-politica,
+#banner-cookies-politica {
+    z-index: 10000 !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    #banner-cookies-politica {
+        padding: 1rem;
+    }
+    
+    #banner-cookies-politica .flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #banner-cookies-politica .flex > div {
+        width: 100%;
+    }
+}
+
+/* Estilos para modo de alto contraste */
+@media (prefers-contrast: high) {
+    #boton-imprimir-politica {
+        border: 2px solid #000;
+    }
+    
+    #banner-cookies-politica {
+        border-top: 2px solid #fff;
+    }
+}
+
+/* Mejoras de accesibilidad */
+#boton-imprimir-politica:focus,
+#aceptar-cookies-politica:focus,
+#rechazar-cookies-politica:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+
+#boton-imprimir-politica {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Estilos para el banner de cookies */
+#banner-cookies-politica {
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+    #boton-imprimir-politica {
+        bottom: 1rem !important;
+        right: 1rem !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+    
+    #banner-cookies-politica {
+        padding: 1rem !important;
+    }
+}
+
+/* Estilos para impresión */
+@media print {
+    #boton-imprimir-politica,
+    #banner-cookies-politica {
+        display: none !important;
+    }
+}
+
+
+.bubble {
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.bubble:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.iso-9001 {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.iso-14001 {
+    background: linear-gradient(135deg, #10b981, #047857);
+}
+
+.iso-27001 {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.iso-45001 {
+    background: linear-gradient(135deg, #f6c35c, #ed9c3a);
+}
+
+.central-bubble {
+    background: linear-gradient(135deg, #6365f1d3, #4e46e5d3);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.3);
+    cursor: pointer;
+}
+
+.orbit {
+    animation: orbit 20s linear infinite;
+}
+
+@keyframes orbit {
+    0% { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+}
+
+.orbit-container {
+    margin-right: 160px;
+    margin-bottom: 160px;
+}
+
+.orbit-delay-1 {
+    animation-delay: -5s;
+}
+
+.orbit-delay-2 {
+    animation-delay: -10s;
+}
+
+.orbit-delay-3 {
+    animation-delay: -15s;
+}
+
+@media (max-width: 768px) {
+    .orbit {
+        animation: none;
+    }
+    
+    .orbit-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/*-------- SIG ------------*/
+/* COLORES DE LAS BURBUJAS - Puedes cambiar los colores aquí */
+.planificar {
+    background: linear-gradient(180deg,rgb(241, 230, 19) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.hacer {
+    background: linear-gradient(180deg,rgba(59, 130, 246, 1) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.verificar {
+    background: linear-gradient(180deg,rgb(253, 33, 33) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.actuar {
+    background: linear-gradient(180deg,rgb(27, 161, 83) 0%, rgba(255, 255, 255, 0.08) 40%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.central-bubble-sig {
+    background: linear-gradient(135deg, #0e0e21c5, #100e2ec5);
+    box-shadow: 0 5px 15px rgba(12, 13, 90, 0.3);
+}
+
+/* CONTENEDOR ORBITAL - AJUSTA EL TAMAÑO AQUÍ */
+.orbit-sig-container {
+    position: relative;
+    width: 300px;  /* Cambia este valor para ajustar el tamaño del contenedor */
+    height: 300px; /* Cambia este valor para ajustar el tamaño del contenedor */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* ANIMACIÓN ORBITAL - AJUSTA VELOCIDAD Y RADIO AQUÍ */
+.orbit-sig {
+    animation: rotate 20s linear infinite; /* Cambia 20s para ajustar velocidad */
+    margin-left: -10px;
+    margin-top: -10px
+}
+
+.orbit-delay-1 {
+    animation-delay: -5s; /* Retraso para la segunda burbuja */
+}
+
+.orbit-delay-2 {
+    animation-delay: -10s; /* Retraso para la tercera burbuja */
+}
+
+.orbit-delay-3 {
+    animation-delay: -15s; /* Retraso para la cuarta burbuja */
+}
+
+@keyframes orbit-sig {
+    0% { 
+        transform: rotate(0deg) translateX(60px) rotate(0deg); /* Cambia 180px para ajustar radio de órbita */
+    }
+    100% { 
+        transform: rotate(360deg) translateX(60px) rotate(-360deg); /* Cambia 180px para ajustar radio de órbita */
+    }
+}
+
+/* ESTILOS PARA EL TEXTO CURVO */
+.curved-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.4rem; /* Tamaño del texto - AJUSTA AQUÍ */
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra para mejor legibilidad */
+}
+
+/* ROTACIÓN DEL TEXTO - SE AJUSTA AUTOMÁTICAMENTE CON LA ANIMACIÓN */
+.orbit-sig > div {
+    animation: counter-rotate 20s linear infinite; /* Misma duración que la animación orbital */
+}
+
+.orbit-delay-1 > div {
+    animation-delay: -5s;
+}
+
+.orbit-delay-2 > div {
+    animation-delay: -10s;
+}
+
+.orbit-delay-3 > div {
+    animation-delay: -15s;
+}
+
+@keyframes counter-rotate {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
+/* EFECTO DE TEXTO CURVO CON SVG */
+.text-path {
+    fill: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+/* Estilos para tarjetas destacadas */
+.card-highlight {
+    transform: scale(1.1);
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 1);
+    border: 1px solid #292929f6;
+    transition: all 1.5s ease-in;
+    z-index: 10;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .orbit-sig-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    @keyframes orbit-sig {
+        0% { 
+            transform: rotate(0deg) translateX(50px) rotate(0deg);
+        }
+        100% { 
+            transform: rotate(360deg) translateX(50px) rotate(-360deg);
+        }
+    }
+}
+
+/*-------------------------*/
+
+/*----- SideBar --------*/
+.sidebar {
+    transition: transform 0.6s ease-in-out;
+}
+
+.sidebar-hidden {
+    transform: translateX(-100%);
+}
+/*----- SideBar --------*/
