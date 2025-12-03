@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        "./**/*.html",           // Escanea TODOS los HTML
-        "./src/**/*.js",         // Escanea TODOS los JS en src/
-        "./js/**/*.js",
-        "./views/**/*.html",     // Escanea views y subcarpetas
+        "./*.html",
+        "./views/**/*.html", 
+        "./politica-privacidad/*.html",
+        "./acerca-de/*.html",
+        "./terminos-usos/*.html",
     ],
     darkMode: 'class',
     theme: {

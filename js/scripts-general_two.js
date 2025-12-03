@@ -17,9 +17,9 @@ function initializeTheme() {
     const themeIcon = document.getElementById('theme-icon');
     const savedTheme = localStorage.getItem('theme') || 'light';
     
-    console.log('themeToggle', themeToggle);
-    console.log('themeIcon', themeIcon);
-    console.log('savedTheme', savedTheme);
+    // console.log('themeToggle', themeToggle);
+    // console.log('themeIcon', themeIcon);
+    // console.log('savedTheme', savedTheme);
     // Función para cambiar imágenes
     function updateImages(isDark) {
         const logoImages = document.querySelectorAll('[data-theme-logo]');
